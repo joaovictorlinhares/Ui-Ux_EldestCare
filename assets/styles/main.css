@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(reset.css);
+
+:root {
+    --bg-color-white: #fcfffc;
+    --bg-color-green: #2ba84a;
+
+    --color-black: #2d2d2a;
+    --color-gray: #4c4c47;
+    --color-blue-gray: #848fa5;
+    --color-green: #2ba84a;
+}
+
+* {
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+
+    user-select: none;
+}
+
+.roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.green {
+    color: var(--color-green);
+}
+
+.gray {
+    color: var(--color-gray);
+}

@@ -1,0 +1,90 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 425px;
+    margin-top: 48px;
+
+    font-size: 18px;
+}
+
+.input label {
+    padding: 16px;
+    color: var(--color-black);
+}
+
+.input input {
+    border: none;
+    height: 48px;
+    font-size: 18px;
+    outline: none;
+    padding: 16px;
+
+    width: 100%;
+
+    color: var(--color-gray);
+}
+
+.input input[type=button] {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    width: 56px;
+    background-image: url('../images/eye.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.input .input-line {
+    width: 100%;
+    display: flex;
+    background-color: var(--color-black);
+    height: 2px;
+}
+
+.input #input-esqueceu-senha button[type=button]{
+    font-size: 12px;
+    padding: 16px 16px;
+    width: 100%;
+    text-align: left;
+
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+}
+
+#input-password {
+    display: flex;
+    margin-right: 8px;
+}
+
+.button-normal {
+    width: 100%;
+    margin-top: 72px;
+    font-size: 18px;
+    font-weight: 700;
+
+    background-color: var(--color-green);
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    padding: 32px;
+
+    color: var(--bg-color-white);
+}
+
+#sem-cadastro {
+    background-color: transparent;
+    border: none;
+
+    width: 100%;
+    margin-top: 16px;
+
+    padding: 16px;
+
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
