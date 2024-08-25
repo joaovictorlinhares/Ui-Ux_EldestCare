@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*360 x 800*/
+
+:root{
+    --color-dark1: #272727;
+    --color-verde: #2BA84A;
+    --color-babypowder: #FCFFFC;
+    --color-gray: #848FA5;
+    --color-darkgray: #4C4C47;
+    --color-jetblack: #4C4C47;
+    --color-cinzaescuro: #2D2D2A;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.cabecalho,
+.topapp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cabecalho{
+    font-family: "Roboto";
+    font-style: normal;
+    background-color: var(--color-verde);
+    height: 88px;
+    justify-content: space-between;
+    padding: 0 5%;
+    
+}
+
+#iconemenu{
+    width: 18px;
+    height: 12px;
+}
+
+#nomeapp{
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--color-babypowder);
+    margin-left: 10%;
+
+}
+
+.perfil{
+    display: flex;
+    align-items: center;
+}
+
+.perfil p{
+    color: var(--color-cinzaescuro);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.perfil img{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+.contatocontainer{
+    font-family: "Lexend";
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0px 15px 0px;
+}
+
+#contatotexto{
+    width: 323px;
+    height: 104px;
+}
+
+#contatotexto h1{
+    width: 256px;
+    height: 56px;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--color-cinzaescuro);
+}
+
+#contatotexto p{
+    width: 323px;
+    height: 43px;
+    font-weight: 300;
+    font-size: 12px;
+    
+}
+
+
