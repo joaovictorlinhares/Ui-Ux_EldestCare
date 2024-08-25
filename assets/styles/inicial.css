@@ -1,0 +1,44 @@
+@import url(inputs.css);
+
+.frase-motivacional {
+    background-color: var(--bg-color-green);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 284px;
+}
+
+.image-estetoscopio {
+    width: 60%;
+    max-width: 320px;
+}
+
+.frase-motivacional p {
+    padding: 16px 72px;
+    text-align: center;
+    font-weight: 300;
+    color: var(--bg-color-white);
+}
+
+.acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 24px;
+    gap: 16px;
+}
+
+.acoes img {
+
+    width: 40vw;
+    max-width: 240px;
+}
+
+.acoes button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}

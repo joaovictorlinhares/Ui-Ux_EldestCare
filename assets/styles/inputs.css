@@ -88,3 +88,19 @@
     justify-content: center;
     gap: 4px;
 }
+
+.button-sos {
+    width: 80%;
+    max-width: 480px;
+    margin-top: 72px;
+    font-size: 32px;
+    font-weight: 700;
+
+    background-color: transparent;
+    border: 8px #FF1D1D solid;
+    border-radius: 100px;
+    outline: none;
+    padding: 32px;
+
+    color: #FF1D1D;
+}
