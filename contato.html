@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/contato.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>EldestCare</title>
 </head>
 <body>
+
     <header class="cabecalho">
         <img id="iconemenu" src="assets/images/iconemenu.png" alt="Icone do Menu"> 
+
         <h1 id="nomeapp">EldestCare</h1>
+
         <div class="perfil">
             <p id="nomeperfil">João W.</p>
             <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil">
@@ -25,12 +26,31 @@
             <p>Contamos com uma rede de profissionais altamente qualificados 
             e especializados no cuidado com a saúde dos idosos. </p>
         </div>
-        <div id="barradepesquisa">
 
-        </div>
+        <form>
+            <div class="barrapesquisa">
+                <span class="search-icon material-symbols-outlined">search</span>
+                <input class="search-input" type="search" placeholder="Pesquise os seus sintomas">
+            </div>
+        </form>
 
-
-
+        <section class="sintomas-botoes">
+            <div class="div-visao">
+                <img src="assets/images/sintoma-olho.png" alt="Imagem do Tratamento de Visão">
+                <p class="sintomamaior">Tratamento de Visão</p>
+                <p class="sintomasmenor">10 Profissionais Disponíveis</p>
+            </div>
+            <div class="div-coracao">
+                <img src="assets/images/sintoma-coracao.png" alt="Imagem da Cirurgia do Coração">
+                <p class="sintomamaior">Cirurgia do Coração</p>
+                <p class="sintomasmenor">5 Profissionais Disponíveis</p>
+            </div>
+            <div class="div-dental">
+                <img src="assets/images/sintoma-dente.png" alt="Imagem do Serviço Dental">
+                <p class="sintomamaior">Serviço Dental</p>
+                <p class="sintomasmenor">20 Profissionais Disponíveis</p>
+            </div>
+        </section>
     </main>
 
     <footer class="rodape">

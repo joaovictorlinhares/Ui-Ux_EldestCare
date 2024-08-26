@@ -12,6 +12,8 @@
     --color-jetblack: #4C4C47;
     --color-cinzaescuro: #2D2D2A;
 
+    --width: 106px;
+    --height: 98px;
 }
 
 * {
@@ -106,7 +108,7 @@ body{
 #contatotexto h1{
     width: 256px;
     height: 56px;
-    font-weight: 500;
+    font-weight: 560;
     font-size: 22px;
     color: var(--color-cinzaescuro);
 }
@@ -114,10 +116,88 @@ body{
 #contatotexto p{
     width: 323px;
     height: 43px;
-    font-weight: 300;
+    margin-top: 5px;
+    font-weight: 370;
     font-size: 12px;
     
 }
+
+
+
+.barrapesquisa{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    width: 323px;
+    transition: box-shadow 0.25s;
+
+    margin: 20px;
+}
+
+.barrapesquisa:focus-within{
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+}
+
+.search-input{
+    font-size: 12px;
+    font-family: 'Lexend';
+    font-weight: 550;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    outline: none;
+    border: none;
+    background: transparent;
+    flex: 1;
+}   
+
+.search-input::placeholder,
+.search-icon{
+    color: rgba(0, 0, 0, 0.50);
+}
+
+
+
+.sintomas-botoes{
+    display: flex;
+    margin: 10px 24px;
+    gap: 3px;
+}
+
+.div-visao,
+.div-coracao,
+.div-dental{
+    text-align: center;
+    
+}
+
+.div-visao img,
+.div-coracao img,
+.div-dental img{
+    width: var(--width);
+    height: var(--height);
+    
+}
+
+.sintomamaior{
+    
+    height: 30px;
+    font-weight: 350;
+    font-size: 12px;
+}
+
+.sintomasmenor{
+    font-weight: 250;
+    font-size: 12px;
+}
+
+
+
+
+
+
 
 
 
@@ -127,11 +207,14 @@ body{
     width: 100%;
     padding: 5%;
     margin-top: auto;
+    position: fixed;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     background-color: var(--color-verde);
+    border-radius: 10px 10px 0px 0px;
 }
 
 .rodape img{
