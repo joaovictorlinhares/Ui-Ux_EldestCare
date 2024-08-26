@@ -35,25 +35,30 @@ body{
     width: 100vw;
     height: 100vh;
     min-height: 100%;
+    overflow: hidden;
 }
+
+
+
+
 
 /*HEADER*/
-.cabecalho,
-.topapp{
+.cabecalho{
     display: flex;
-    flex-direction: row;
     align-items: center;
     width: 100%;
-}
-
-.cabecalho{
     font-family: "Roboto";
     font-style: normal;
     background-color: var(--color-verde);
     height: 88px;
     justify-content: space-between;
     padding: 0 5%;
-    
+    flex-shrink: 0;
+}
+
+.menu-header{
+    flex: 1;
+    justify-content: baseline;
 }
 
 #iconemenu{
@@ -62,16 +67,19 @@ body{
 }
 
 #nomeapp{
+    text-align: center;
     font-weight: 400;
     font-size: 22px;
     color: var(--color-babypowder);
-    margin-left: 10%;
+    
 
 }
 
 .perfil{
+    flex: 1;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .perfil p{
@@ -89,20 +97,25 @@ body{
 
 
 
+
 /*MAIN*/
 .contatocontainer{
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
     font-family: "Lexend";
     font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 25px;
-    height: 80vh;
+    
 }
 
 #contatotexto{
-    width: 323px;
-    height: 104px;
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    padding-top: 25px;
 }
 
 #contatotexto h1{
@@ -123,7 +136,7 @@ body{
 }
 
 
-
+/*BARRA DE PESQUISA*/
 .barrapesquisa{
     width: max-content;
     display: flex;
@@ -144,8 +157,8 @@ body{
 .search-input{
     font-size: 12px;
     font-family: 'Lexend';
-    font-weight: 550;
-    letter-spacing: 1px;
+    font-weight: 515;
+    letter-spacing: 2px;
     margin-left: 5px;
     outline: none;
     border: none;
@@ -159,10 +172,10 @@ body{
 }
 
 
-
+/*SINTOMAS*/
 .sintomas-botoes{
     display: flex;
-    margin: 10px 24px;
+    margin: 0px 24px;
     gap: 3px;
 }
 
@@ -194,7 +207,152 @@ body{
 }
 
 
+/*AGENDAMENTO*/
+.agendamento-texto {
+    width: 323px;
+    height: max-content;
+    margin: 0 auto;
+    padding-top: 5%;
+}
 
+.agendamento-texto h1{
+    font-weight: 560;
+    font-size: 22px;
+    color: var(--color-cinzaescuro);
+}
+
+.agendamento-texto p{
+    font-weight: 360;
+    font-size: 12px;
+    color: black;
+}
+
+
+/*PROFISSIONAIS*/
+.scroll-profissionais{
+    margin-top: 2px;
+    width: 330px;
+    height: 175px;
+
+    padding: 5px 2%;
+    overflow-y: scroll;
+
+}
+
+.profissionais{
+    width: 100%;
+    height: 66.5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns:auto 2fr 1fr;
+    gap: 10px;
+}
+
+.coluna-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.imagem-profi{
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-profi img{
+    width: 40px;
+    height: 40px;
+}
+
+.coluna-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 57.5px;
+}
+
+.profi-texto{
+    width: max-content;
+    height: max-content;
+    margin-bottom: 7px;
+}
+
+.profi-texto h1{
+    height: 15px;
+    font-weight: 350;
+    font-size: 16px;
+    color: #1D1B20;
+}
+
+#oftal{
+    font-weight: 450;
+    font-size: 12px;
+    color: #C9841D;
+}
+
+#cardio{
+    font-weight: 450;
+    font-size: 12px;
+    color: #c72924;
+}
+
+#odonto{
+    font-weight: 450;
+    font-size: 12px;
+    color: #811cc5;
+}
+
+#fisio{
+    font-weight: 450;
+    font-size: 12px;
+    color: #1da7c9;
+}
+
+.profi-horas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.hora{
+    width: 45px;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--color-babypowder);
+    display: grid;
+    padding: 1px;
+    background-color: var(--color-cinzaescuro);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.coluna-3 button{
+    width: 68px;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 4px 2px 4px;
+    margin-top: 5px;
+    transition-duration: 0.4;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.coluna-3 button{
+    background-color: var(--color-verde);
+    color: var(--color-babypowder);
+}
+
+.coluna-3 button:hover{
+    background-color: #256F37;
+    color: var(--color-babypowder);
+
+}
 
 
 
@@ -214,7 +372,8 @@ body{
     align-items: center;
     box-sizing: border-box;
     background-color: var(--color-verde);
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
+    
 }
 
 .rodape img{
