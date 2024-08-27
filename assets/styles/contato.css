@@ -12,8 +12,8 @@
     --color-jetblack: #4C4C47;
     --color-cinzaescuro: #2D2D2A;
 
-    --width: 106px;
-    --height: 98px;
+    --width-img: 106px;
+    --height-img: 98px;
 }
 
 * {
@@ -189,8 +189,8 @@ body{
 .div-visao img,
 .div-coracao img,
 .div-dental img{
-    width: var(--width);
-    height: var(--height);
+    width: var(--width-img);
+    height: var(--height-img);
     
 }
 
