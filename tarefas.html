@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarefas | EldestCare</title>
+
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/tarefas.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="menu-header">
+        <img
+          id="iconemenu"
+          src="assets/images/iconemenu.png"
+          alt="Icone do Menu"
+        />
+      </div>
+
+      <h1 id="nomeapp">EldestCare</h1>
+
+      <div class="perfil">
+        <p id="nomeperfil">João W.</p>
+        <img
+          id="iconeperfil"
+          src="assets/images/iconeperfil.png"
+          alt="Icone do Perfil"
+        />
+      </div>
+    </header>
+    <main>
+      <section class="section__adiconar_task">
+        <h2 class="section__title">Crie suas próprias tarefas!</h2>
+        <p class="section__description">
+          Suas tarefas corriqueiras, como levar cachorro para passear, colocar
+          roupas na máquinas e muito mais podem ser adicionados por você mesmo!
+        </p>
+        <form class="form__adicionar_task" action="tarefas.html" method="post">
+          <button class="form__button--new" type="submit">+</button>
+          <div class="form__container--input">
+            <input
+              class="form__input form__input--text"
+              type="text"
+              id="tarefa"
+              name="tarefa"
+              placeholder="Adicione o título de sua tarefa!"
+              required
+            />
+            <div class="continainer__input--datetime">
+              <label for="data"
+                >Data:
+                <input
+                  class="form__input form__input--data"
+                  type="date"
+                  id="data"
+                  name="data"
+                  value="2024-01-01"
+                  required
+                />
+              </label>
+              -
+              <label for="hora"
+                >Hora:<input
+                  class="form__input form__input--hora"
+                  type="time"
+                  id="hora"
+                  name="hora"
+                  value="12:00"
+                  required
+              /></label>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section class="section__lista_task">
+        <div>
+          <ul>
+            <li>
+              <h3>Task 1</h3>
+              <span>01/01/2024 - 12:00h</span>
+              <input type="checkbox" checked />
+              🗑️ :
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <a href="inicial.html">
+        <img src="assets/images/home.png" alt="Menu Inicial" />
+      </a>
+    </footer>
+  </body>
+</html>
