@@ -24,7 +24,7 @@
 
     <main>
         <section class="titulo-rotina">
-            <h1>Rotina Especializada Diária</h1>
+            <h1 class="textorotina-marcado">Rotina Especializada Diária</h1>
             <div id="titulo-menor">
                 <p id="titulo-manha">Manhã</p>
                 <p>•</p>
@@ -33,7 +33,6 @@
         </section>
 
         <section class="elementos-rotina">
-
             <div class="container-progresso">
                 <div class="barra-progresso" id="idbarraprogresso"></div>
             </div>
@@ -123,6 +122,15 @@
                     label.classList.remove('completo');
                 }
                 } 
+
+            const todosMarcados = checkedCheckboxes === totalCheckboxes;
+            const textosMarcados = document.querySelectorAll('.textorotina-marcado')
+            if (todosMarcados) {
+                textosMarcados.forEach(texto => texto.classList.add('texto-gradiente'))
+            } else {
+                textosMarcados.forEach(texto => texto.classList.remove('texto-gradiente'))
+            }
+
             }
     </script>
 </body>

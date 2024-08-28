@@ -52,9 +52,11 @@ main{
 .elementos-rotina{
     margin-top: 20px;
     width: max-content;
+    min-height: 685px;
     display: flex;
     
-
+    overflow-y: auto;
+    padding-right: 5px;
 }
 
 .lista-rotina{
@@ -127,6 +129,13 @@ main{
 
 .textorotina-marcado.completo{
     color: var(--color-verdeclaro);
+}
+
+.texto-gradiente {
+    background: linear-gradient(to right, red, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Para navegadores modernos */
 }
 
 
