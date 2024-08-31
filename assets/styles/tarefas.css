@@ -1,3 +1,6 @@
+@import url(headerfooter.css);
+@import url(rotina.css);
+
 /* MAIN CONTENT */
 .conteudo__principal {
   display: flex;
