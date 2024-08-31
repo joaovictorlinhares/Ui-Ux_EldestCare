@@ -108,6 +108,10 @@
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
             />
+            <img
+              src="assets/images/Lixeira.svg"
+              alt="Imagem para editar as tarefas"
+            />
           </li>
           <li class="item-lista">
             <div class="conteudo-item">
@@ -119,6 +123,10 @@
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
             />
+            <img
+              src="assets/images/Lixeira.svg"
+              alt="Imagem para editar as tarefas"
+            />
           </li>
           <li class="item-lista">
             <div class="conteudo-item">
@@ -129,6 +137,10 @@
               type="checkbox"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+            />
+            <img
+              src="assets/images/Lixeira.svg"
+              alt="Imagem para editar as tarefas"
             />
           </li>
           <li class="item-lista">
@@ -143,6 +155,10 @@
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
             />
+            <img
+              src="assets/images/Lixeira.svg"
+              alt="Imagem para editar as tarefas"
+            />
           </li>
           <li class="item-lista">
             <div class="conteudo-item">
@@ -154,6 +170,10 @@
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
             />
+            <img
+              src="assets/images/Lixeira.svg"
+              alt="Imagem para editar as tarefas"
+            />
           </li>
           <li class="item-lista">
             <div class="conteudo-item">
@@ -164,6 +184,10 @@
               type="checkbox"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+            />
+            <img
+              src="assets/images/Lixeira.svg"
+              alt="Imagem para editar as tarefas"
             />
           </li>
           <li class="item-lista">
@@ -178,6 +202,10 @@
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
             />
+            <img
+              src="assets/images/Lixeira.svg"
+              alt="Imagem para editar as tarefas"
+            />
           </li>
           <li class="item-lista">
             <div class="conteudo-item">
@@ -190,6 +218,10 @@
               type="checkbox"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+            />
+            <img
+              src="assets/images/Lixeira.svg"
+              alt="Imagem para editar as tarefas"
             />
           </li>
         </ul>
@@ -247,6 +279,40 @@
         "label__input--date-time",
         "label__input--date-time"
       );
+
+      function atualizarProgresso(checkbox) {
+        const checkboxes = document.querySelectorAll(".checkbox-item");
+        const totalCheckboxes = checkboxes.length;
+        const checkedCheckboxes = document.querySelectorAll(
+          ".checkbox-item:checked"
+        ).length;
+        const barraProgresso = document.getElementById("idbarraprogresso");
+        const progresso = (checkedCheckboxes / totalCheckboxes) * 100;
+        barraProgresso.style.height = progresso + "%";
+
+        const label = checkbox.previousElementSibling.querySelector("h4");
+        if (label) {
+          if (checkbox.checked) {
+            label.classList.add("completo");
+          } else {
+            label.classList.remove("completo");
+          }
+        }
+
+        const todosMarcados = checkedCheckboxes === totalCheckboxes;
+        const textosMarcados = document.querySelectorAll(
+          ".textorotina-marcado"
+        );
+        if (todosMarcados) {
+          textosMarcados.forEach((texto) =>
+            texto.classList.add("texto-gradiente")
+          );
+        } else {
+          textosMarcados.forEach((texto) =>
+            texto.classList.remove("texto-gradiente")
+          );
+        }
+      }
     </script>
   </body>
 </html>

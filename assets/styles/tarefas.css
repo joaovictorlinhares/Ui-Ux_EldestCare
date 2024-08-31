@@ -3,15 +3,15 @@
 
 /* MAIN CONTENT */
 .conteudo__principal {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  font-family: "Lexend";
+  font-style: normal;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  width: 100vw;
   padding: 0 1.25rem;
-
-  overflow-y: auto;
 }
 
 .secao__adicionar_tarefa {
@@ -122,4 +122,8 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 
 label:has(input) {
   width: 100%;
+}
+
+.item-lista {
+  align-items: flex-start;
 }
