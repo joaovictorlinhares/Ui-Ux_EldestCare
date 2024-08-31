@@ -12,8 +12,8 @@
   --color-jetblack: #4c4c47;
   --color-cinzaescuro: #2d2d2a;
 
-  --width: 106px;
-  --height: 98px;
+  --width-img: 106px;
+  --height-img: 98px;
 }
 
 * {
@@ -174,8 +174,8 @@ body {
 .div-visao img,
 .div-coracao img,
 .div-dental img {
-  width: var(--width);
-  height: var(--height);
+  width: var(--width-img);
+  height: var(--height-img);
 }
 
 .sintomamaior {
