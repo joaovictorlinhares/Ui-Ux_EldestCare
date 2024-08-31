@@ -29,55 +29,73 @@
         />
       </div>
     </header>
-    <main>
-      <section class="section__adiconar_task">
-        <h2 class="section__title">Crie suas próprias tarefas!</h2>
-        <p class="section__description">
-          Suas tarefas corriqueiras, como levar cachorro para passear, colocar
-          roupas na máquinas e muito mais podem ser adicionados por você mesmo!
-        </p>
-        <form class="form__adicionar_task" action="tarefas.html" method="post">
-          <button class="form__button--new" type="submit">+</button>
-          <div class="form__container--input">
-            <input
-              class="form__input form__input--text"
-              type="text"
-              id="tarefa"
-              name="tarefa"
-              placeholder="Adicione o título de sua tarefa!"
-              required
+    <main class="conteudo__principal">
+      <section class="secao__adicionar_tarefa">
+        <div class="secao__info">
+          <h2 class="secao__info--title">Crie suas próprias tarefas!</h2>
+          <p class="secao__info--description">
+            Suas tarefas corriqueiras, como levar cachorro para passear, colocar
+            roupas na máquinas e muito mais podem ser adicionados por você
+            mesmo!
+          </p>
+        </div>
+
+        <form
+          class="form__adicionar_tarefa"
+          action="tarefas.html"
+          method="post"
+        >
+          <button
+            class="form__botao--adicionar"
+            type="submit"
+            aria-label="Adicionar Tarefa"
+          >
+            <img
+              src="./assets/images/plus-icon.svg"
+              alt="Ícone de adicionar tarefas"
             />
+          </button>
+          <div class="form__container--input">
+            <div class="form__group">
+              <input
+                type="text"
+                id="tarefa"
+                name="tarefa"
+                class="form__input"
+                required
+              />
+              <label for="tarefa" class="form__label"
+                >Adicione o título de sua tarefa!</label
+              >
+            </div>
             <div class="continainer__input--datetime">
-              <label for="data"
-                >Data:
-                <input
-                  class="form__input form__input--data"
-                  type="date"
-                  id="data"
-                  name="data"
-                  value="2024-01-01"
-                  required
-                />
-              </label>
-              -
-              <label for="hora"
-                >Hora:<input
-                  class="form__input form__input--hora"
-                  type="time"
-                  id="hora"
-                  name="hora"
-                  value="12:00"
-                  required
-              /></label>
+              <input
+                class="form__input"
+                name="date-time"
+                id="date-time"
+                type="datetime-local"
+                value="2024-08-28T08:30"
+              />
             </div>
           </div>
         </form>
       </section>
-      <section class="section__lista_task">
+      <section class="section__lista_tarefa">
         <div>
           <ul>
             <li>
-              <h3>Task 1</h3>
+              <h3>tarefa 1</h3>
+              <span>01/01/2024 - 12:00h</span>
+              <input type="checkbox" checked />
+              🗑️ :
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <h3>tarefa 1</h3>
               <span>01/01/2024 - 12:00h</span>
               <input type="checkbox" checked />
               🗑️ :

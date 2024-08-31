@@ -45,22 +45,62 @@
   margin: 5px;
 }
 
-.form__adicionar_task {
+/* MAIN CONTENT */
+.conteudo__principal {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  padding: 0 1.25rem;
+
+  overflow-y: auto;
+}
+
+.secao__adicionar_tarefa {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5vh;
+  width: 100%;
+
+  margin: 1.75rem 0;
+}
+
+.secao__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.secao__info--title {
+  font-size: 1.75rem;
+}
+
+.secao__info--description {
+  font-size: 1rem;
+}
+
+.form__adicionar_tarefa {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 5vw;
   width: 100%;
-  padding: 1rem;
-  height: 15vh;
+  background-color: #f1fff3;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 }
 
-.form__button--new {
-  padding: 1rem;
+.form__botao--adicionar {
+  padding: 0.75rem;
   background: transparent;
   border: none;
   font-size: 2rem;
 }
+
 .form__container--input {
   display: flex;
   flex-direction: column;
@@ -68,23 +108,58 @@
   width: 100%;
 }
 
+.form__input {
+  width: 100%;
+  padding: 0.25rem;
+
+  color: var(--color-black);
+  background-color: transparent;
+
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+
+  transition: border-color 0.3s ease;
+  &:focus {
+    outline: none;
+    border: 2px solid var(--color-black);
+    border-radius: 0.25rem;
+  }
+}
+
+.form__group {
+  position: relative;
+  width: 100%;
+}
+
+.form__label {
+  position: absolute;
+  left: 4px;
+  transform: translateY(50%);
+  font-size: 0.75rem;
+  pointer-events: none; /* Para evitar que o label seja clicável */
+  transition: all 0.2s ease;
+}
+
 .continainer__input--datetime {
   display: flex;
   gap: 2vw;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.form__input {
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  /* Personalize o seletor de data/hora */
+}
+
+label:has(input) {
   width: 100%;
-  border: none;
 }
 
 /* FOOTER */
 
 .rodape {
   width: 100%;
-  padding: 2.5vw;
+  padding: 1vh;
   position: fixed;
   bottom: 0;
   display: flex;
