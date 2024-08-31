@@ -6,6 +6,7 @@
     <title>Tarefas | EldestCare</title>
 
     <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="stylesheet" href="assets/styles/headerfooter.css" />
     <link rel="stylesheet" href="assets/styles/tarefas.css" />
   </head>
   <body>
@@ -29,6 +30,7 @@
         />
       </div>
     </header>
+
     <main class="conteudo__principal">
       <section class="secao__adicionar_tarefa">
         <div class="secao__info">
@@ -64,23 +66,64 @@
                 class="form__input"
                 required
               />
-              <label for="tarefa" class="form__label"
-                >Adicione o título de sua tarefa!</label
+              <label id="label__input--tarefa" for="tarefa" class="form__label"
+                >Adicione o título de sua Tarefa!</label
               >
             </div>
             <div class="continainer__input--datetime">
-              <input
-                class="form__input"
-                name="date-time"
-                id="date-time"
-                type="datetime-local"
-                value="2024-08-28T08:30"
-              />
+              <div class="form__group">
+                <input
+                  class="form__input"
+                  name="date-time"
+                  id="date-time"
+                  type="datetime-local"
+                  onclick="this.showPicker()"
+                />
+                <label
+                  id="label__input--date-time"
+                  class="form__label"
+                  for="date-time"
+                  >Insira a Data e Hora da sua Tarefa!</label
+                >
+              </div>
             </div>
           </div>
         </form>
       </section>
       <section class="section__lista_tarefa">
+        <div>
+          <ul>
+            <li>
+              <h3>tarefa 1</h3>
+              <span>01/01/2024 - 12:00h</span>
+              <input type="checkbox" checked />
+              🗑️ :
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <h3>tarefa 1</h3>
+              <span>01/01/2024 - 12:00h</span>
+              <input type="checkbox" checked />
+              🗑️ :
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <h3>tarefa 1</h3>
+              <span>01/01/2024 - 12:00h</span>
+              <input type="checkbox" checked />
+              🗑️ :
+            </li>
+          </ul>
+        </div>
+
         <div>
           <ul>
             <li>
@@ -110,5 +153,51 @@
         <img src="assets/images/home.png" alt="Menu Inicial" />
       </a>
     </footer>
+
+    <script>
+      function toggleLabelAndShowDate(inputId, labelId, displayElementId) {
+        let inputElement = document.getElementById(inputId);
+        let labelElement = document.getElementById(labelId);
+        let displayElement = document.getElementById(displayElementId);
+
+        // Esconde a label ao focar no input
+        inputElement.addEventListener("focus", () => {
+          labelElement.style.opacity = 0;
+        });
+
+        // Mostra a label novamente se o input estiver vazio ao perder o foco
+        inputElement.addEventListener("blur", () => {
+          if (inputElement.value === "") {
+            labelElement.style.opacity = 1;
+          } else {
+            // Formata a data e a hora
+            let dateValue = new Date(inputElement.value);
+            let formattedDate = dateValue.toLocaleString("pt-BR", {
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric",
+            });
+            let formattedHour = dateValue.toLocaleString("pt-BR", {
+              hour: "2-digit",
+              minute: "2-digit",
+            });
+            displayElement.style.opacity = 1;
+            displayElement.textContent = `Data: ${formattedDate} | Hora: ${formattedHour}`;
+          }
+        });
+      }
+
+      // Usando a função para os inputs de tarefa e data/hora
+      toggleLabelAndShowDate(
+        "tarefa",
+        "label__input--tarefa",
+        "display-tarefa"
+      );
+      toggleLabelAndShowDate(
+        "date-time",
+        "label__input--date-time",
+        "label__input--date-time"
+      );
+    </script>
   </body>
 </html>
