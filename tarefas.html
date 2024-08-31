@@ -90,61 +90,109 @@
           </div>
         </form>
       </section>
-      <section class="section__lista_tarefa">
-        <div>
-          <ul>
-            <li>
-              <h3>tarefa 1</h3>
-              <span>01/01/2024 - 12:00h</span>
-              <input type="checkbox" checked />
-              🗑️ :
-            </li>
-          </ul>
+      <section class="elementos-rotina">
+        <div class="container-progresso">
+          <div class="barra-progresso" id="idbarraprogresso"></div>
         </div>
 
-        <div>
-          <ul>
-            <li>
-              <h3>tarefa 1</h3>
-              <span>01/01/2024 - 12:00h</span>
-              <input type="checkbox" checked />
-              🗑️ :
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <ul>
-            <li>
-              <h3>tarefa 1</h3>
-              <span>01/01/2024 - 12:00h</span>
-              <input type="checkbox" checked />
-              🗑️ :
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <ul>
-            <li>
-              <h3>tarefa 1</h3>
-              <span>01/01/2024 - 12:00h</span>
-              <input type="checkbox" checked />
-              🗑️ :
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <ul>
-            <li>
-              <h3>tarefa 1</h3>
-              <span>01/01/2024 - 12:00h</span>
-              <input type="checkbox" checked />
-              🗑️ :
-            </li>
-          </ul>
-        </div>
+        <ul class="lista-rotina">
+          <li class="item-lista">
+            <div class="conteudo-item">
+              <h4 class="textorotina-marcado">
+                Medicamento para Pressão Arterial (Lisinopril)
+              </h4>
+              <p>Hoje, 07:30 AM</p>
+            </div>
+            <input
+              type="checkbox"
+              class="checkbox-item"
+              onclick="atualizarProgresso(this)"
+            />
+          </li>
+          <li class="item-lista">
+            <div class="conteudo-item">
+              <h4 class="textorotina-marcado">Caminhada (15 Min)</h4>
+              <p>Hoje, 07:15 AM</p>
+            </div>
+            <input
+              type="checkbox"
+              class="checkbox-item"
+              onclick="atualizarProgresso(this)"
+            />
+          </li>
+          <li class="item-lista">
+            <div class="conteudo-item">
+              <h4 class="textorotina-marcado">Café da Manhã e Hidratação</h4>
+              <p>Hoje, 08:00 AM</p>
+            </div>
+            <input
+              type="checkbox"
+              class="checkbox-item"
+              onclick="atualizarProgresso(this)"
+            />
+          </li>
+          <li class="item-lista">
+            <div class="conteudo-item">
+              <h4 class="textorotina-marcado">
+                Exercício Mental (Jogos, Tarefas)
+              </h4>
+              <p>Hoje, 09:30 AM</p>
+            </div>
+            <input
+              type="checkbox"
+              class="checkbox-item"
+              onclick="atualizarProgresso(this)"
+            />
+          </li>
+          <li class="item-lista">
+            <div class="conteudo-item">
+              <h4 class="textorotina-marcado">Almoço e Hidratação</h4>
+              <p>Hoje, 12:00 PM</p>
+            </div>
+            <input
+              type="checkbox"
+              class="checkbox-item"
+              onclick="atualizarProgresso(this)"
+            />
+          </li>
+          <li class="item-lista">
+            <div class="conteudo-item">
+              <h4 class="textorotina-marcado">Soneca ou Descanço</h4>
+              <p>Hoje, 14:30 PM</p>
+            </div>
+            <input
+              type="checkbox"
+              class="checkbox-item"
+              onclick="atualizarProgresso(this)"
+            />
+          </li>
+          <li class="item-lista">
+            <div class="conteudo-item">
+              <h4 class="textorotina-marcado">
+                Exercício Físico Leve (Alongamento ou Yoga)
+              </h4>
+              <p>Hoje, 15:00 PM</p>
+            </div>
+            <input
+              type="checkbox"
+              class="checkbox-item"
+              onclick="atualizarProgresso(this)"
+            />
+          </li>
+          <li class="item-lista">
+            <div class="conteudo-item">
+              <h4 class="textorotina-marcado">
+                Medicamento para diabetes (Metformina)
+              </h4>
+              <p>Hoje, 18:15 PM</p>
+            </div>
+            <input
+              type="checkbox"
+              class="checkbox-item"
+              onclick="atualizarProgresso(this)"
+            />
+          </li>
+        </ul>
       </section>
     </main>
 
