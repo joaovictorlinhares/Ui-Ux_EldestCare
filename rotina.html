@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/styles/rotina.css">
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header e Footer</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="menu-header">
+            <img id="iconemenu" src="assets/images/iconemenu.png" alt="Icone do Menu"> 
+        </div>
+        
+        <h1 id="nomeapp">EldestCare</h1>
+
+        <div class="perfil">
+            <p id="nomeperfil">João W.</p>
+            <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil">
+        </div> 
+    </header>
+
+    <main>
+        <section class="titulo-rotina">
+            <h1 class="textorotina-marcado">Rotina Especializada Diária</h1>
+            <div id="titulo-menor">
+                <p id="titulo-manha">Manhã</p>
+                <p>•</p>
+                <p id="titulo-data">Sábado, 24 de Agosto</p>
+            </div>
+        </section>
+
+        <section class="elementos-rotina">
+            <div class="container-progresso">
+                <div class="barra-progresso" id="idbarraprogresso"></div>
+            </div>
+
+            <ul class="lista-rotina">
+                <li class="item-lista">
+                    <div class="conteudo-item">
+                        <h4 class="textorotina-marcado">Medicamento para Pressão Arterial (Lisinopril)</h4>
+                        <p>Hoje, 07:30 AM</p>
+                    </div>
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                </li>
+                <li class="item-lista">
+                    <div class="conteudo-item">
+                        <h4 class="textorotina-marcado">Caminhada (15 Min)</h4>
+                        <p>Hoje, 07:15 AM</p>
+                    </div>
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                </li>
+                <li class="item-lista">
+                    <div class="conteudo-item">
+                        <h4 class="textorotina-marcado">Café da Manhã e Hidratação</h4>
+                        <p>Hoje, 08:00 AM</p>
+                    </div>
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                </li>
+                <li class="item-lista">
+                    <div class="conteudo-item">
+                        <h4 class="textorotina-marcado">Exercício Mental (Jogos, Tarefas)</h4>
+                        <p>Hoje, 09:30 AM</p>
+                    </div>
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                </li>
+                <li class="item-lista">
+                    <div class="conteudo-item">
+                        <h4 class="textorotina-marcado">Almoço e Hidratação</h4>
+                        <p>Hoje, 12:00 PM</p>
+                    </div>
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                </li>
+                <li class="item-lista">
+                    <div class="conteudo-item">
+                        <h4 class="textorotina-marcado">Soneca ou Descanço</h4>
+                        <p>Hoje, 14:30 PM</p>
+                    </div>
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                </li>
+                <li class="item-lista">
+                    <div class="conteudo-item">
+                        <h4 class="textorotina-marcado">Exercício Físico Leve (Alongamento ou Yoga)</h4>
+                        <p>Hoje, 15:00 PM</p>
+                    </div>
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                </li>
+                <li class="item-lista">
+                    <div class="conteudo-item">
+                        <h4 class="textorotina-marcado">Medicamento para diabetes (Metformina)</h4>
+                        <p>Hoje, 18:15 PM</p>
+                    </div>
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                </li>
+            </ul>
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+        <a href="inicial.html">
+            <img src="assets/images/home.png" alt="Menu Inicial">
+        </a>
+    </footer>
+
+    <script>
+        function atualizarProgresso(checkbox) {
+            const checkboxes = document.querySelectorAll('.checkbox-item');
+            const totalCheckboxes = checkboxes.length;
+            const checkedCheckboxes = document.querySelectorAll('.checkbox-item:checked').length;
+            const barraProgresso = document.getElementById('idbarraprogresso');
+            const progresso = (checkedCheckboxes / totalCheckboxes) * 100;
+            barraProgresso.style.height = progresso + '%';
+        
+            const label = checkbox.previousElementSibling.querySelector('h4');
+            if (label) {
+                if (checkbox.checked) {
+                    label.classList.add('completo');
+                } else {
+                    label.classList.remove('completo');
+                }
+                } 
+
+            const todosMarcados = checkedCheckboxes === totalCheckboxes;
+            const textosMarcados = document.querySelectorAll('.textorotina-marcado')
+            if (todosMarcados) {
+                textosMarcados.forEach(texto => texto.classList.add('texto-gradiente'))
+            } else {
+                textosMarcados.forEach(texto => texto.classList.remove('texto-gradiente'))
+            }
+
+            }
+    </script>
+</body>
+</html>
+
+            
