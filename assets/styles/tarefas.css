@@ -127,3 +127,13 @@ label:has(input) {
 .item-lista {
   align-items: flex-start;
 }
+
+/*BARRA DE PROGRESSÃO - ARRUMADA*/
+.container-progresso{
+  height: 435px;
+}
+
+/*LISTA TAREFA - ARRUMADA*/
+.elementos-rotina{
+  min-height: 580px;
+}
