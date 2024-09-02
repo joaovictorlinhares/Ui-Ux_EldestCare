@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tarefas | EldestCare</title>
+    <title>EldestCare | Tarefas</title>
 
     <link rel="stylesheet" href="assets/styles/main.css" />
     <link rel="stylesheet" href="assets/styles/headerfooter.css" />
@@ -15,7 +15,8 @@
         <img
           id="iconemenu"
           src="assets/images/iconemenu.png"
-          alt="Icone do Menu"
+          alt="Ícone do menu, que leva para a página de configurações"
+          style="cursor: pointer;"
           onclick="pagina('configurações.html')"
         />
       </div>
@@ -23,19 +24,17 @@
       <h1 id="nomeapp">EldestCare</h1>
 
       <div class="perfil">
-        <p id="nomeperfil">João W.</p>
-        <img
-          id="iconeperfil"
-          src="assets/images/iconeperfil.png"
-          alt="Icone do Perfil"
-        />
-      </div>
+        <p id="nomeperfil" style="cursor: pointer;" onclick="pagina('entrar.html')">João W.</p>
+        <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil" style="cursor: pointer;" onclick="pagina('entrar.html')">
+      </div> 
+
+      
     </header>
 
     <main class="conteudo__principal">
-      <section class="secao__adicionar_tarefa">
+      <section class="secao__adicionar_tarefa" aria-labelledby="titulo-adicionar-tarefa">
         <div class="secao__info">
-          <h2 class="secao__info--title">Crie suas próprias tarefas!</h2>
+          <h2 id="titulo-adicionar-tarefa" class="secao__info--title">Crie suas próprias tarefas!</h2>
           <p class="secao__info--description">
             Suas tarefas corriqueiras, como levar cachorro para passear, colocar
             roupas na máquinas e muito mais podem ser adicionados por você
@@ -47,6 +46,7 @@
           class="form__adicionar_tarefa"
           action="tarefas.html"
           method="post"
+          aria-describedby="descricao-formulario"
         >
           <button
             class="form__botao--adicionar"
@@ -55,7 +55,7 @@
           >
             <img
               src="./assets/images/plus-icon.svg"
-              alt="Ícone de adicionar tarefas"
+              alt="Ícone de mais, usado para adicionar tarefas"
             />
           </button>
           <div class="form__container--input">
@@ -91,12 +91,13 @@
           </div>
         </form>
       </section>
+
       <section class="elementos-rotina">
         <div class="container-progresso">
-          <div class="barra-progresso" id="idbarraprogresso"></div>
+          <div class="barra-progresso" id="idbarraprogresso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
         </div>
 
-        <ul class="lista-rotina">
+        <ul class="lista-rotina" aria-label="Lista de tarefas">
           <li class="item-lista">
             <div class="conteudo-item">
               <h4 class="textorotina-marcado">
@@ -106,12 +107,15 @@
             </div>
             <input
               type="checkbox"
+              id="checkbox-item1"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+              aria-label="Marcar tarefa Reunião com o Nutricionista como concluída"
             />
             <img
               src="assets/images/Lixeira.svg"
-              alt="Imagem para editar as tarefas"
+              alt="Imagem para excluir as tarefas"
+              style="cursor: pointer;"
             />
           </li>
           <li class="item-lista">
@@ -121,12 +125,15 @@
             </div>
             <input
               type="checkbox"
+              id="checkbox-item2"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+              aria-label="Marcar tarefa Levar o Pet ao Veterinário como concluída"
             />
             <img
               src="assets/images/Lixeira.svg"
-              alt="Imagem para editar as tarefas"
+              alt="Imagem para excluir as tarefas"
+              style="cursor: pointer;"
             />
           </li>
           <li class="item-lista">
@@ -136,12 +143,15 @@
             </div>
             <input
               type="checkbox"
+              id="checkbox-item3"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+              aria-label="Marcar tarefa Fazer Compra de Supermercado como concluída"
             />
             <img
               src="assets/images/Lixeira.svg"
-              alt="Imagem para editar as tarefas"
+              alt="Imagem para excluir as tarefas"
+              style="cursor: pointer;"
             />
           </li>
           <li class="item-lista">
@@ -153,12 +163,15 @@
             </div>
             <input
               type="checkbox"
+              id="checkbox-item4"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+              aria-label="Marcar tarefa Visitar Amigos como concluída"
             />
             <img
               src="assets/images/Lixeira.svg"
-              alt="Imagem para editar as tarefas"
+              alt="Imagem para excluir as tarefas"
+              style="cursor: pointer;"
             />
           </li>
           <li class="item-lista">
@@ -168,12 +181,15 @@
             </div>
             <input
               type="checkbox"
+              id="checkbox-item5"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+              aria-label="Marcar tarefa Pagar Contas de Serviços Públicos como concluída"
             />
             <img
               src="assets/images/Lixeira.svg"
-              alt="Imagem para editar as tarefas"
+              alt="Imagem para excluir as tarefas"
+              style="cursor: pointer;"
             />
           </li>
           <li class="item-lista">
@@ -183,12 +199,15 @@
             </div>
             <input
               type="checkbox"
+              id="checkbox-item6"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+              aria-label="Marcar tarefa Organizar a Despensa como concluída"
             />
             <img
               src="assets/images/Lixeira.svg"
-              alt="Imagem para editar as tarefas"
+              alt="Imagem para excluir as tarefas"
+              style="cursor: pointer;"
             />
           </li>
           <li class="item-lista">
@@ -200,12 +219,15 @@
             </div>
             <input
               type="checkbox"
+              id="checkbox-item7"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+              aria-label="Marcar tarefa Chamar Técnico de Internet como concluída"
             />
             <img
               src="assets/images/Lixeira.svg"
-              alt="Imagem para editar as tarefas"
+              alt="Imagem para excluir as tarefas"
+              style="cursor: pointer;"
             />
           </li>
           <li class="item-lista">
@@ -217,12 +239,15 @@
             </div>
             <input
               type="checkbox"
+              id="checkbox-item8"
               class="checkbox-item"
               onclick="atualizarProgresso(this)"
+              aria-label="Marcar tarefa Limpeza Geral da Casa como concluída"
             />
             <img
               src="assets/images/Lixeira.svg"
-              alt="Imagem para editar as tarefas"
+              alt="Imagem para excluir as tarefas"
+              style="cursor: pointer;"
             />
           </li>
         </ul>
@@ -231,7 +256,7 @@
 
     <footer class="rodape">
       <a href="inicial.html">
-        <img src="assets/images/home.png" alt="Menu Inicial" />
+        <img src="assets/images/home.png" alt="Ícone que leva ao menu inicial" />
       </a>
     </footer>
 

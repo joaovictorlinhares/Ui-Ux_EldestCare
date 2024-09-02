@@ -91,8 +91,7 @@
 
 .button-sos {
     width: 80%;
-    max-width: 480px;
-    margin-top: 72px;
+    max-width: 280px;
     font-size: 32px;
     font-weight: 700;
 
@@ -100,7 +99,7 @@
     border: 8px #FF1D1D solid;
     border-radius: 100px;
     outline: none;
-    padding: 32px;
+    padding: 10px;
 
     color: #FF1D1D;
 }

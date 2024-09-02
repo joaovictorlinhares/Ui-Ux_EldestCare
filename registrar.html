@@ -11,33 +11,42 @@
 </head>
 
 <body>
-    <img src="assets/images/logo-eldestcare.svg" class="logo-inicial">
+    <header>
+        <img src="assets/images/logo-eldestcare.svg" alt="Logotipo da EldestCare" class="logo-inicial">
+    </header>
 
-    <section id="entrar-form">
-        <form action="get">
-            <div class="input">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="exemplo@gmail.com">
-                <div class="input-line"></div>
-            </div>
-
-            <div class="input">
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha">
-                <div class="input-line"></div>
-            </div>
-
-            <div class="input">
-                <label for="confirmar-senha">Confirmar Senha</label>
-                <input type="password" name="confirmar-senha" id="confirmar-senha">
-                <div class="input-line"></div>
-            </div>
-
-            <button class="button-normal">Confirmar Cadastro</button>
-        </form>
-
-    </section>
-
+    <main>
+        <section id="entrar-form" aria-labelledby="registrar-form-title">
+            <h1 id="registrar-form-title" class="visually-hidden">Formulário de Registro</h1>
+            <form action="get">
+                <div class="input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" autocomplete="email" required aria-describedby="email-hint">
+                    <div class="input-line"></div>
+                    <small id="email-hint">Informe seu e-mail para o registro.</small>
+                </div>
+    
+                <div class="input">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" required aria-describedby="senha-hint">
+                    <div class="input-line"></div>
+                    <small id="senha-hint">Crie uma senha forte.</small>
+                </div>
+    
+                <div class="input">
+                    <label for="confirmar-senha">Confirmar Senha</label>
+                    <input type="password" name="confirmar-senha" id="confirmar-senha" required aria-describedby="confirmar-senha-hint">
+                    <div class="input-line"></div>
+                    <small id="confirmar-senha-hint">Repita a senha para confirmação.</small>
+                </div>
+    
+                <button class="button-normal" aria-label="Botão para Confirmar Cadastro" style="cursor: pointer;" onclick="pagina('entrar.html')">Confirmar Cadastro</button>
+            </form>
+    
+        </section>
+    </main>
+    
+    <script src="assets/js/main.js"></script> 
 </body>
 
 </html>

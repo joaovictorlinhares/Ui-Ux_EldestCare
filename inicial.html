@@ -14,37 +14,39 @@
 <body>
     <header class="cabecalho">
         <div class="menu-header">
-            <img id="iconemenu" src="assets/images/iconemenu.png" alt="Icone do Menu" onclick="pagina('configurações.html')"> 
+            <img id="iconemenu" src="assets/images/iconemenu.png" alt="Icone do Menu" style="cursor: pointer;" onclick="pagina('configurações.html')"> 
         </div>
         
         <h1 id="nomeapp">EldestCare</h1>
 
         <div class="perfil">
-            <p id="nomeperfil">João W.</p>
-            <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil">
+            <p id="nomeperfil" style="cursor: pointer;" onclick="pagina('entrar.html')">João W.</p>
+            <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil" style="cursor: pointer;" onclick="pagina('entrar.html')">
         </div> 
     </header>
 
-    <section class="frase-motivacional">
-        <img src="assets/images/image-estetoscopio.svg" class="image-estetoscopio">
-        <p>"Cuidar da sua saúde hoje é garantir mais qualidade de vida para o futuro."</p>
-    </section>
+    <main>
+        <section class="frase-motivacional">
+            <img src="assets/images/image-estetoscopio.svg" alt="Imagem de um estetoscópio" class="image-estetoscopio">
+            <p>"Cuidar da sua saúde hoje é garantir mais qualidade de vida para o futuro."</p>
+        </section>
+    
+        <section class="acoes">
+            <a href="contato.html">
+                <img src="assets/images/profissionais-saude.png" alt="Acessar contato com profissionais de saúde">
+            </a>
+    
+            <a href="tarefas.html">
+                <img src="assets/images/tarefas.png" alt="Acessar lista de tarefas">
+            </a>
+    
+            <a href="rotina.html">
+                <img src="assets/images/rotina.png" alt="Acessar rotina diária">
+            </a>
+        </section>    
+    </main>
 
-    <section class="acoes">
-        <a href="contato.html">
-            <img src="assets/images/profissionais-saude.png" alt="">
-        </a>
-
-        <a href="tarefas.html">
-            <img src="assets/images/tarefas.png" alt="">
-        </a>
-
-        <a href="rotina.html">
-            <img src="assets/images/rotina.png" alt="">
-        </a>
-    </section>
-
-    <button class="button-sos">SOS</button>
+    <button class="button-sos" aria-label="Botão de emergência SOS" style="cursor: pointer;">SOS</button>
     <script src="assets/js/main.js"></script> 
 </body>
 

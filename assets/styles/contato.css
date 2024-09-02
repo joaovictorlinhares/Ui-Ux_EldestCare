@@ -3,6 +3,18 @@
 
 /*360 x 800*/
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
 :root {
   --color-dark1: #272727;
   --color-verde: #2ba84a;
@@ -107,7 +119,7 @@ body {
   padding-top: 25px;
 }
 
-#contatotexto h1 {
+#contatotexto h2 {
   width: 256px;
   height: 56px;
   font-weight: 560;
@@ -197,7 +209,7 @@ body {
   padding-top: 5%;
 }
 
-.agendamento-texto h1 {
+.agendamento-texto h2 {
   font-weight: 560;
   font-size: 22px;
   color: var(--color-cinzaescuro);

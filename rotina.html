@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <link rel="stylesheet" href="assets/styles/rotina.css">
-    
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header e Footer</title>
+    <link rel="stylesheet" href="assets/styles/rotina.css">
+    
+    <title>EldestCare | Rotina</title>
 </head>
 <body>
     <header class="cabecalho">
         <div class="menu-header">
-            <img id="iconemenu" src="assets/images/iconemenu.png" alt="Icone do Menu" onclick="pagina('configurações.html')">
+            <img id="iconemenu" src="assets/images/iconemenu.png" alt="Icone do Menu" role="button" aria-label="Abrir configurações" style="cursor: pointer;" onclick="pagina('configurações.html')">
         </div>
         
         <h1 id="nomeapp">EldestCare</h1>
 
         <div class="perfil">
-            <p id="nomeperfil">João W.</p>
-            <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil">
-        </div> 
+            <p id="nomeperfil" style="cursor: pointer;" onclick="pagina('entrar.html')">João W.</p>
+            <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil" style="cursor: pointer;" onclick="pagina('entrar.html')">
+          </div>
     </header>
 
     <main>
-        <section class="titulo-rotina">
-            <h1 class="textorotina-marcado">Rotina Especializada Diária</h1>
-            <div id="titulo-menor">
+        <section class="titulo-rotina" aria-labelledby="rotina-title">
+            <h1 id="rotina-title" class="textorotina-marcado">Rotina Especializada Diária</h1>
+            <div id="titulo-menor" aria-describedby="rotina-data">
                 <p id="titulo-manha">Manhã</p>
-                <p>•</p>
+                <p aria-hidden="true">•</p>
                 <p id="titulo-data">Sábado, 24 de Agosto</p>
             </div>
         </section>
 
-        <section class="elementos-rotina">
-            <div class="container-progresso">
+        <section class="elementos-rotina" aria-labelledby="rotina-tasks">
+            <h2 id="rotina-tasks" class="visually-hidden">Tarefas da Rotina</h2>
+            <div class="container-progresso" aria-live="polite" aria-label="Progresso da rotina">
                 <div class="barra-progresso" id="idbarraprogresso"></div>
             </div>
 
@@ -43,56 +43,56 @@
                         <h4 class="textorotina-marcado">Medicamento para Pressão Arterial (Lisinopril)</h4>
                         <p>Hoje, 07:30 AM</p>
                     </div>
-                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)" id="tarefa-1" aria-label="Marcar como completo: Medicamento para Pressão Arterial">
                 </li>
                 <li class="item-lista">
                     <div class="conteudo-item">
                         <h4 class="textorotina-marcado">Caminhada (15 Min)</h4>
                         <p>Hoje, 07:15 AM</p>
                     </div>
-                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)" id="tarefa-2" aria-label="Marcar como completo: Caminhada">
                 </li>
                 <li class="item-lista">
                     <div class="conteudo-item">
                         <h4 class="textorotina-marcado">Café da Manhã e Hidratação</h4>
                         <p>Hoje, 08:00 AM</p>
                     </div>
-                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)" id="tarefa-3" aria-label="Marcar como completo: Café da Manhã e Hidratação">
                 </li>
                 <li class="item-lista">
                     <div class="conteudo-item">
                         <h4 class="textorotina-marcado">Exercício Mental (Jogos, Tarefas)</h4>
                         <p>Hoje, 09:30 AM</p>
                     </div>
-                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)" id="tarefa-4" aria-label="Marcar como completo: Exercício Mental">
                 </li>
                 <li class="item-lista">
                     <div class="conteudo-item">
                         <h4 class="textorotina-marcado">Almoço e Hidratação</h4>
                         <p>Hoje, 12:00 PM</p>
                     </div>
-                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)" id="tarefa-5" aria-label="Marcar como completo: Almoço e Hidratação">
                 </li>
                 <li class="item-lista">
                     <div class="conteudo-item">
-                        <h4 class="textorotina-marcado">Soneca ou Descanço</h4>
+                        <h4 class="textorotina-marcado">Soneca ou Descanso</h4>
                         <p>Hoje, 14:30 PM</p>
                     </div>
-                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)" id="tarefa-6" aria-label="Marcar como completo: Soneca ou Descanso">
                 </li>
                 <li class="item-lista">
                     <div class="conteudo-item">
                         <h4 class="textorotina-marcado">Exercício Físico Leve (Alongamento ou Yoga)</h4>
                         <p>Hoje, 15:00 PM</p>
                     </div>
-                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)" id="tarefa-7" aria-label="Marcar como completo: Exercício Físico Leve">
                 </li>
                 <li class="item-lista">
                     <div class="conteudo-item">
-                        <h4 class="textorotina-marcado">Medicamento para diabetes (Metformina)</h4>
+                        <h4 class="textorotina-marcado">Medicamento para Diabetes (Metformina)</h4>
                         <p>Hoje, 18:15 PM</p>
                     </div>
-                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)">
+                    <input type="checkbox" class="checkbox-item" onclick="atualizarProgresso(this)" id="tarefa-8" aria-label="Marcar como completo: Medicamento para Diabetes">
                 </li>
             </ul>
         </section>

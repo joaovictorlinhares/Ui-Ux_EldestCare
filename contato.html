@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,32 +11,34 @@
 
     <header class="cabecalho">
         <div class="menu-header">
-            <img id="iconemenu" src="assets/images/iconemenu.png" alt="Icone do Menu" onclick="pagina('configurações.html')"> 
+            <img id="iconemenu" src="assets/images/iconemenu.png" alt="Icone do Menu" style="cursor: pointer;" onclick="pagina('configurações.html')"> 
         </div>
         
         <h1 id="nomeapp">EldestCare</h1>
 
         <div class="perfil">
-            <p id="nomeperfil">João W.</p>
-            <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil">
+            <p id="nomeperfil" style="cursor: pointer;" onclick="pagina('entrar.html')">João W.</p>
+            <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil" style="cursor: pointer;" onclick="pagina('entrar.html')">
         </div> 
     </header>
 
     <main class="contatocontainer">
-        <section id="contatotexto">
-            <h1>Os melhores médicos se encontram aqui!</h1>
+        <section id="contatotexto" aria-labelledby="contato-title">
+            <h2 id="contato-title">Os melhores médicos se encontram aqui!</h2>
             <p>Contamos com uma rede de profissionais altamente qualificados 
             e especializados no cuidado com a saúde dos idosos. </p>
         </section>
 
-        <form>
-            <div class="barrapesquisa">
-                <span class="search-icon material-symbols-outlined">search</span>
-                <input class="search-input" type="search" placeholder="Pesquise os seus sintomas">
+        <form id="search-form" role="search" aria-label="Pesquisa de Sintomas">
+            <div class="barrapesquisa">      
+                <span class="search-icon material-symbols-outlined" aria-hidden="true">search</span>
+                <input id="search-input" class="search-input" type="search" placeholder="Pesquise os seus sintomas">
+                <label for="search-input" class="visually-hidden">Pesquisar sintomas</label>
             </div>
         </form>
 
-        <section class="sintomas-botoes">
+        <section class="sintomas-botoes" aria-labelledby="sintomas-title">
+            <h2 id="sintomas-title" class="visually-hidden">Opções de Tratamento Preferenciais</h2>
             <div class="div-visao">
                 <img src="assets/images/sintoma-olho.png" alt="Imagem do Tratamento de Visão">
                 <p class="sintomamaior">Tratamento de Visão</p>
@@ -54,16 +56,17 @@
             </div>
         </section>
 
-        <section class="agendamento">
+        <section class="agendamento" aria-labelledby="agendamento-title">
             <div class="agendamento-texto">
-                <h1>Faça um Agendamento</h1>
+                <h2 id="agendamento-title">Faça um Agendamento</h2>
                 <p>Escolha o profissional de sua preferência!</p>
             </div>
             <div class="scroll-profissionais">
+
                 <div class="profissionais">
                     <div class="coluna-1">
                         <div class="imagem-profi">
-                            <img src="assets/images/Profi-R.png" alt="Renata">
+                            <img src="assets/images/Profi-R.png" alt="Imagem da Dra. Renata">
                         </div>
                     </div>
                     <div class="coluna-2">
@@ -78,13 +81,14 @@
                         </div>
                     </div>
                     <div class="coluna-3">
-                        <button>Escolher</button>
+                        <button aria-label="Escolher horário com Dra. Renata">Escolher</button>
                     </div>
                 </div>
+
                 <div class="profissionais">
                     <div class="coluna-1">
                         <div class="imagem-profi">
-                            <img src="assets/images/Profi-MA.png" alt="Mario Almeida">
+                            <img src="assets/images/Profi-MA.png" alt="Imagem do Dr. Mario Almeida">
                         </div>
                     </div>
                     <div class="coluna-2">
@@ -99,13 +103,14 @@
                         </div>
                     </div>
                     <div class="coluna-3">
-                        <button>Escolher</button>
+                        <button aria-label="Escolher horário com Dr. Mario Almeida">Escolher</button>
                     </div>
                 </div>
+
                 <div class="profissionais">
                     <div class="coluna-1">
                         <div class="imagem-profi">
-                            <img src="assets/images/Profi-V.png" alt="Mario Almeida">
+                            <img src="assets/images/Profi-V.png" alt="Imagem da Dra. Veronica Oliveira">
                         </div>
                     </div>
                     <div class="coluna-2">
@@ -120,18 +125,19 @@
                         </div>
                     </div>
                     <div class="coluna-3">
-                        <button>Escolher</button>
+                        <button aria-label="Escolher horário com Dra. Veronica Oliveira">Escolher</button>
                     </div>
                 </div>
+
                 <div class="profissionais">
                     <div class="coluna-1">
                         <div class="imagem-profi">
-                            <img src="assets/images/Profi-PS.png" alt="Mario Almeida">
+                            <img src="assets/images/Profi-PS.png" alt="Imagem do Dr. Pedro Santos">
                         </div>
                     </div>
                     <div class="coluna-2">
                         <div class="profi-texto">
-                            <h1>Pedro Santos</h1>
+                            <h1>Dr. Pedro Santos</h1>
                             <p id="fisio">Fisioterapeuta</p>
                         </div>
                         <div class="profi-horas">
@@ -152,7 +158,7 @@
 
     <footer class="rodape">
         <a href="inicial.html">
-            <img src="assets/images/home.png" alt="Menu Inicial">
+            <img src="assets/images/home.png" alt="Ir para a página inicial">
         </a>
     </footer>
     <script src="assets/js/main.js"></script> 

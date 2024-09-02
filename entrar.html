@@ -11,40 +11,50 @@
 </head>
 
 <body>
-    <img src="assets/images/logo-eldestcare.svg" class="logo-inicial">
+    
+    <header>
+        <img src="assets/images/logo-eldestcare.svg" alt="Logotipo da EldestCare" class="logo-inicial">
+    </header>
 
-    <section id="entrar-form">
-        <form action="get">
-            <div class="input">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="exemplo@gmail.com">
-                <div class="input-line"></div>
-            </div>
-
-            <div class="input">
-                <div id="input-password">
-                    <div class="password">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" id="senha">
+    <main>
+        <section id="entrar-form" aria-labelledby="entrar-form-title">
+            <h1 id="entrar-form-title" class="visually-hidden">Formulário de Login</h1>
+            <form action="get">
+                <div class="input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="exemplo@gmail.com" required aria-describedby="email-hint">
+                    <div class="input-line"></div>
+                    <small id="email-hint">Informe seu e-mail registrado.</small>
+                </div>
+    
+                <div class="input">
+                    <div id="input-password">
+                        <div class="password">
+                            <label for="senha">Senha</label>
+                            <input type="password" name="senha" id="senha" required aria-describedby="senha-hint">
+                        </div>
+                        <input type="button" aria-label="Botão de Mostrar ou ocultar senha." style="cursor: pointer;">
                     </div>
-                    <input type="button">
+    
+                    <div class="input-line"></div>
+                    <small id="senha-hint">Informe sua senha. </small>
+
+                    <div id="input-esqueceu-senha">
+                        <button type="button" aria-label="Clique caso tenha esquecido a senha." style="cursor: pointer;">esqueci a senha!</button>
+                    </div>
                 </div>
-
-                <div class="input-line"></div>
-                <div id="input-esqueceu-senha">
-                    <button type="button">esqueci a senha!</button>
-                </div>
-            </div>
-
-            <button class="button-normal">Entrar</button>
-        </form>
-
-        <button type="button" id="sem-cadastro">
-            <p class="gray">Não tem cadastro?</p>
-            <p class="green">Entre aqui!</p>
-        </button>
-    </section>
-
+    
+                <button class="button-normal" aria-label="Botão de Entrar na conta" onclick="pagina('inicial.html')" style="cursor: pointer;">Entrar</button>
+            </form>
+    
+            <button type="button" id="sem-cadastro" aria-label="Opção para criar conta" onclick="pagina('registrar.html')">
+                <p class="gray">Não tem cadastro?</p>
+                <p class="green" style="cursor: pointer;">Entre aqui!</p>
+            </button>
+        </section> 
+    </main>
+    
+    <script src="assets/js/main.js"></script> 
 </body>
 
 </html>

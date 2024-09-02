@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,58 +9,62 @@
 </head>
 <body>
     <header class="cabecalho">
-        
+        <div class="menu-header">
+            <img id="iconemenu" src="assets/images/iconemenu.png" alt="Icone do Menu" role="button" aria-label="Abrir configurações" style="cursor: pointer;" onclick="pagina('configurações.html')">
+        </div>
+
         <h1 id="nomeapp">EldestCare</h1>
 
         <div class="perfil">
-            <p id="nomeperfil">João W.</p>
-            <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil">
-        </div> 
+            <p id="nomeperfil" style="cursor: pointer;" onclick="pagina('entrar.html')">João W.</p>
+            <img id="iconeperfil" src="assets/images/iconeperfil.png" alt="Icone do Perfil" style="cursor: pointer;" onclick="pagina('entrar.html')">
+        </div>
     </header>
 
     <main>
         <div class="container">
-            <h1>Configurações</h1>
-            <p>Aqui você pode ajustar as configurações do aplicativo para melhor 
+            <h1 id="config-title">Configurações</h1>
+            <p id="config-description">Aqui você pode ajustar as configurações do aplicativo para melhor 
                 atender às suas necessidades. Escolha como deseja receber lembretes, 
-                configure suas rotinas diárias, conecte seus dispositivos wearables e muito mais.</p>
+                configure suas rotinas diárias, conecte seus dispositivos wearables e muito mais.
+            </p>
         </div>
             
-        <ul class="lista-item">
+        <ul class="lista-item" aria-labelledby="config-title" role="list">
             <li class="item-lista">
-                <img src="assets/images/Notificação (1).png" alt="">
+                <img src="assets/images/Notificação (1).png" alt="Ícone de lembretes personalizados">
                 <div class="conteudo-item">
                     <h4>Lembretes Personalizados</h4>
                 </div>
-                <input type="checkbox" class="checkbox-item" checked="checked">
+                <input id="checkbox-config1" type="checkbox" class="checkbox-item" checked="checked" aria-label="Ativar lembretes personalizados">
             </li>
             <li class="item-lista">
-                <img src="assets/images/Sorriso.png" alt="">
+                <img src="assets/images/Sorriso.png" alt="Ícone de estímulos mentais">
                 <div class="conteudo-item">
                     <h4>Estímulos Mentais</h4>
                 </div>
-                <input type="checkbox" class="checkbox-item" checked="checked">
+                <input id="checkbox-config2" type="checkbox" class="checkbox-item" checked="checked" aria-label="Ativar estímulos mentais">
             </li>
             <li class="item-lista">
-                <img src="assets/images/Carinha.png" alt="">
+                <img src="assets/images/Carinha.png" alt="Ícone de exercícios físicos">
                 <div class="conteudo-item">
                     <h4>Exercicios Físicos</h4>
                 </div>
-                <input type="checkbox" class="checkbox-item" checked="checked">
+                <input id="checkbox-config3" type="checkbox" class="checkbox-item" checked="checked" aria-label="Ativar exercícios físicos">
             </li>
             <li class="item-lista">
-                <img src="assets/images/Pesquisar.png" alt="">
+                <img src="assets/images/Pesquisar.png" alt="Ícone de consultas rápidas com profissionais">
                 <div class="conteudo-item">
                     <h4>Consultas Rápidas com Profissionais</h4>
                 </div>
-                <input type="checkbox" class="checkbox-item">
+                <input id="checkbox-config4" type="checkbox" class="checkbox-item" aria-label="Ativar consultas rápidas com profissionais">
             </li>
             <li class="item-lista">
-                <img src="assets/images/Coração.png" alt="">
+                <img src="assets/images/Coração.png" alt="Ícone de monitoramento de sinais vitais">
                 <div class="conteudo-item">
                     <h4>Monitoramento de Sinais Vitais</h4>
                 </div>
-                <input type="checkbox" class="checkbox-item">
+                <input id="checkbox-config5" type="checkbox" class="checkbox-item" aria-label="Ativar monitoramento de sinais vitais">
             </li>
             
         </ul>
@@ -73,5 +77,6 @@
             <img src="assets/images/home.png" alt="Menu Inicial">
         </a>
     </footer>
+    <script src="assets/js/main.js"></script> 
 </body>
 </html>
